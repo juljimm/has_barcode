@@ -20,7 +20,7 @@ module HasBarcode
 
       define_method args.first do
         if options[:type] == :code_128
-          @@barcode_configurations[args.first].barcode_class.new(options[:value].call(self), 'A')
+          @@barcode_configurations[args.first].barcode_class.new(options[:value].call(self), 'B')
         else
           @@barcode_configurations[args.first].barcode_class.new(options[:value].call(self))
         end
